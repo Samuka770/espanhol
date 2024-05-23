@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+}
+/* NAVBAR */
+header {
+    background-color: #FFF;
+    color: black;
+    padding: 2px;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+nav {
+    display: flex;
+    background-color: #FFF;
+    align-items: center;
+    padding: 3px;
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(66, 66, 66); /* Marrom escuro */
+    margin: 0 30px;
+}
+#marca a{
+    text-decoration: none;
+    color: black;
+}
+nav a:hover{
+    cursor: pointer;
+    color: #8B4513;
+}
+#pesquisar{
+    height: 50px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+#car-tamanho{
+    margin-left: 40px;
+    height: 60px;
+    cursor: pointer;
+}
+/* FOOTER */
+footer {
+    background-color: rgb(219, 219, 219); /* Marrom escuro */
+    color: rgb(85, 85, 85);
+    text-align: center;
+    padding: 2px;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 10px;
+    width: 100vw;
+}
+footer p{
+    font-size: 0.8rem;
+}
+/* CONTENT */
+.espaco-content{
+    display: block;
+    margin-top: 30px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+/* SIDERBAR ESQUERDA */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+
+}
+/* CONTENT DIREITA */
+.busca-vinhos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 100%;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.product .price {
+    font-size: 16px;
+    color: #888;
+    margin: 0 0 15px;
+}
+
+.product button {
+    background-color: #5cb85c;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #4cae4c;
+}

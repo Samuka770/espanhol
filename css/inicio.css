@@ -5,6 +5,7 @@ body {
     overflow-x: hidden;
     background-color: #f1f1f1;
 }
+/* NAVBAR */
 header {
     background-color: #FFF;
     color: black;
@@ -28,10 +29,25 @@ nav a {
     color: rgb(66, 66, 66); /* Marrom escuro */
     margin: 0 30px;
 }
+#marca a{
+    text-decoration: none;
+    color: black;
+}
 nav a:hover{
     cursor: pointer;
     color: #8B4513;
 }
+#pesquisar{
+    height: 50px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+#car-tamanho{
+    margin-left: 40px;
+    height: 60px;
+    cursor: pointer;
+}
+/* FOOTER */
 footer {
     background-color: rgb(219, 219, 219); /* Marrom escuro */
     color: rgb(85, 85, 85);
@@ -45,16 +61,7 @@ footer {
 footer p{
     font-size: 0.8rem;
 }
-#pesquisar{
-    height: 50px;
-    margin-left: 45px;
-    cursor: pointer;
-}
-#car-tamanho{
-    margin-left: 60px;
-    height: 60px;
-    cursor: pointer;
-}
+/* SLIDES*/
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -62,18 +69,15 @@ footer p{
     justify-content: center;
     margin-top: 20px;
 }
-.container.display{
-    display: flex;
-}
 .slider{
-    margin: 0 auto;
-    width: 730px;
-    height: 350px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 600px;
     overflow: hidden;
 }
 .slides{
     width: 400%;
-    height: 700px;
+    height: 600px;
     display: flex;
 }
 .slides input{
@@ -85,13 +89,13 @@ footer p{
     transition: 1s;
 }
 .slide img{
-    width: 730px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
 }
 .manual-navigation{
     position: absolute;
-    width: 730px;
-    margin-top: -370px;
+    width: 1730px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
 }
@@ -116,9 +120,8 @@ footer p{
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
-
 .navigation-auto div{
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(0, 0, 0);
     padding: 4.5px;
     border-radius: 10px;
     cursor: pointer;
@@ -126,8 +129,8 @@ footer p{
 }
 .navigation-auto{
     position: absolute;
-    width: 730px;
-    margin-top: 330px;
+    width: 1730px;
+    margin-top: 610px;
     display: flex;
     justify-content: center;
 }
@@ -135,39 +138,27 @@ footer p{
     margin-right: 40px;
 }
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #8B4513;
+    background-color: #c45100;
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #8B4513;
+    background-color: #c45100;
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #8B4513;
+    background-color: #c45100;
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #8B4513;
+    background-color: #c45100;
 }
-
-
-
-
-
-
-
-
-
-
-
-.oferta-especial {
+/* RECOMENDADOS */
+.recomendados {
     margin: 0px auto 20px;
     max-width: 1200px;
 }
-
-.produtos-especiais {
+.produtos-recomendado {
     display: flex;
     justify-content: space-between;
 }
-
-.produto-especial {
+.produto-recomendado {
     background-color: #F5F5F5;
     margin-left: 20px;
     border-radius: 5px;
@@ -177,32 +168,11 @@ footer p{
     min-width: 220px;
     text-align: center;
 }
-
-.produto-especial img {
+.produto-recomendado img {
     max-width: 100%;
 }
-
-.desconto {
-    background-color: #FFF;
-    border-radius: 3px;
-    color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    font-size: 14px;
-    padding: 5px 10px;
-}
-
-.preco-original {
-    text-decoration: line-through;
-    color: #888;
-}
-
-.preco-desconto {
-    color: black;
-}
-
-.produto-especial button {
-    background-color: #8B4513;
+.produto-recomendado button {
+    background-color: #c45100;
     border: none;
     border-radius: 3px;
     color: #FFF;
@@ -212,10 +182,83 @@ footer p{
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
-
-.produto-especial button:hover {
-    background-color: #af5830;
+.produto-recomendado button:hover {
+    background-color: #ff6a00;
 }
+.preco-recomendado {
+    color: black;
+}
+/* 1º SEÇÃO DE IMAGENS */
+.tamanho-imagens{
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: space-evenly;
+}
+.imagens{
+    display: flex;
+}
+.imagens img{
+    margin: 10px;
+    width: 700px;
+    height: 300px;
+}
+/* OFERTA ESPECIAL */
+.oferta-especial {
+    margin: 0px auto 20px;
+    max-width: 1200px;
+}
+.produtos-oferta {
+    display: flex;
+    justify-content: space-between;
+}
+.produto-oferta {
+    background-color: #F5F5F5;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(25% - 20px);
+    padding: 20px;
+    min-width: 220px;
+    text-align: center;
+}
+.produto-oferta img {
+    max-width: 100%;
+}
+.produto-oferta button {
+    background-color: #c45100;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+.produto-oferta button:hover {
+    background-color: #ff6a00;
+}
+.desconto {
+    background-color: #FFF;
+    border-radius: 3px;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.preco-original {
+    text-decoration: line-through;
+    color: #888;
+}
+.preco-desconto {
+    color: black;
+}
+
+
+
+
 
 
 
