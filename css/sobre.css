@@ -10,9 +10,7 @@ body {
     top: 90vh;
     right: 2.5vw;
     z-index: 1000;
-    background-color: red;
     padding: 10px;
-    text-decoration: none;
     color: white;
 }
 /* NAVBAR */
@@ -111,27 +109,16 @@ footer p{
 }
 /* Content */
 .sobre{
-    background-color: rgb(255, 255, 255);
-    width: 96vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    background-color: white;
+}
+.containersobre{
+    display: flex;
     align-items: center;
-    gap: 10vh;
-    padding: 2vh 2vw 2vh 2vw;
 }
-.sobre h2{
-    font-size: 48px;
-    color: blue;
+.equipe {
+    background-color: rgb(228, 228, 228);
     display: flex;
-}
-.sobre p{
-    text-align: center;
-    color: red;
-    display: flex;
-}
-#sobreimg{
-    display: flex;
-    gap: 5vw;
-    height: 30vh;
+    justify-content: center;
 }

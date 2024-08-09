@@ -12,9 +12,7 @@ body {
     top: 90vh;
     right: 2.5vw;
     z-index: 1000;
-    background-color: red;
     padding: 10px;
-    text-decoration: none;
     color: white;
 }
 /* NAVBAR */
@@ -128,6 +126,7 @@ body {
 .price{
     font-size: 20px;
     font-weight: 600;
+    color: purple;
 }
 button {
     background-color: rgb(122, 16, 16);

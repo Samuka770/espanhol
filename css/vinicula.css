@@ -10,9 +10,7 @@ body {
     top: 90vh;
     right: 2.5vw;
     z-index: 1000;
-    background-color: red;
     padding: 10px;
-    text-decoration: none;
     color: white;
 }
 /* NAVBAR */

@@ -10,9 +10,7 @@ body {
     top: 90vh;
     right: 2.5vw;
     z-index: 1000;
-    background-color: red;
     padding: 10px;
-    text-decoration: none;
     color: white;
 }
 /* NAVBAR */
@@ -107,4 +105,17 @@ footer {
 }
 footer p{
     font-size: 0.8rem;
+}
+/* CONTENT */
+.sectionclube{
+    display: flex;
+}
+.containerclube{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.imgclube{
+    cursor: pointer;
+    height: 900px;
 }
