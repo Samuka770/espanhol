@@ -108,83 +108,46 @@ footer {
 footer p{
     font-size: 0.8rem;
 }
+
 /* CONTENT */
-#titulo{
-    align-items: center;
+.sectioncontato{
     display: flex;
+    height: 56vh;
     justify-content: center;
-    font-size: 48px;
-    color: rgb(11, 201, 27);
+    gap: 5vw;
+    align-items: center;
 }
-.section{
-    padding: 30px;
-    display: flex;
-}
-/* SIDERBAR ESQUERDA */
-.sidebar{
+.esquerda{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 15vw;
+    align-items: center;
 }
-/* CONTENT DIREITA */
-.busca-vinhos{
+.esquerda img{
+    height: 30vh;
+}
+.direita{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    margin: 0px;
+    padding: 0px;
 }
-.container {
+.direita h2{
+    margin: 0;
+}
+.direita h3{
+    margin: 0;
+}
+#email{
+    width: 20vw;
+}
+#mensagem{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    height: 100px;
+    width: 20vw;
 }
-.product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 1px;
-    text-align: center;
-    width: 200px;
-    height: 350px;
-}
-.visual{
-    position: absolute;
-    display: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 12px;
-    background-color: #0b60af;
-    justify-content: center;
-    padding: 3px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.product:hover .visual{
-    display: flex;
-}
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-.product h2 {
-    font-size: 18px;
-    color: #333;
-    margin: 0 0 10px;
-}
-.product .price {
-    font-size: 16px;
-    color: #888;
-    margin: 0 0 15px;
-}
-.product button {
+.botao{
     background-color: rgb(122, 16, 16);
     border: none;
     color: #fff;
@@ -196,7 +159,8 @@ footer p{
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    width: 10vw;
 }
-.product button:hover {
+.botao:hover {
     background-color: rgb(75, 10, 10);
 }

@@ -5,47 +5,94 @@ body {
     overflow-x: hidden;
     background-color: #f1f1f1;
 }
+.whatsapp{
+    position: fixed;
+    top: 90vh;
+    right: 2.5vw;
+    z-index: 1000;
+    background-color: red;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
 /* NAVBAR */
-header {
-    background-color: #FFF;
-    color: black;
-    padding: 2px;
-    text-align: center;
-    justify-content: space-around;
+.cabecalho{
     display: flex;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    width: 100vw;
+    height: 20vh;
+    background-color: #cfcfcf;
+    font-size: 12px;
+    justify-content: center;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
-nav {
+.cabecalho h1{
+    font-weight: 300;
+}
+.cabecalho2{
     display: flex;
-    background-color: #FFF;
+    justify-content: space-evenly;
+    background-color: #dfdfdf;
+    color: black;
+    text-align: center;
     align-items: center;
-    padding: 3px;
-    text-align: center;
-}
-nav a {
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(66, 66, 66); /* Marrom escuro */
-    margin: 0 30px;
-}
-#marca a{
-    text-decoration: none;
-    color: black;
-}
-nav a:hover{
-    cursor: pointer;
-    color: #8B4513;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 }
 #pesquisar{
-    height: 50px;
-    margin-left: 40px;
-    cursor: pointer;
+    background-color: #ffffff;
+    height: 35px;
+    padding: 15px;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-#car-tamanho{
-    margin-left: 40px;
-    height: 60px;
+#txtBusca{ 
+    font-size: 16px;
+    background: none;
+    outline: none;
+    border: none;
+    text-align:left;
+    height: 35px;
+    width: 150px;
+}
+#imgbuscar{
     cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.navbar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(44, 44, 44, 0.952); /* Marrom escuro */
+    margin: 0 30px;
+}
+.navbar a:hover{
+    cursor: pointer;
+    color: #0b60af;
+}
+#perfil-carrinho{
+    align-items: center;
+    display: flex;
+}
+#perfil{
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 40px;
+}
+#carrinho{
+    cursor: pointer;
+    margin-left: 25px;
+    height: 35px;
 }
 /* FOOTER */
 footer {
@@ -68,10 +115,11 @@ footer p{
     margin-bottom: 20px;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
 }
-.slider{
+.quadroslide{
     margin-bottom: 10px;
-    width: 90%;
+    width: 90vw;
     height: 600px;
     overflow: hidden;
 }
@@ -94,7 +142,7 @@ footer p{
 }
 .manual-navigation{
     position: absolute;
-    width: 1730px;
+    width: 90vw;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -129,7 +177,7 @@ footer p{
 }
 .navigation-auto{
     position: absolute;
-    width: 1730px;
+    width: 90vw;
     margin-top: 610px;
     display: flex;
     justify-content: center;
@@ -148,6 +196,26 @@ footer p{
 }
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #c45100;
+}
+/* CONHEÇA! */
+.conheca{
+    display: block;
+    margin: 0px auto 20px;
+    max-width: 1200px;
+    background-color: #F5F5F5;
+    border: 1px solid #ebebeb;
+    border-radius:  5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(25% - 20px);
+}
+.titulo-conheca{
+    display: flex;
+    justify-content: center;
+}
+.texto-conheca{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 /* RECOMENDADOS */
 .recomendados {
@@ -254,59 +322,4 @@ footer p{
 }
 .preco-desconto {
     color: black;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.img {
-    height: 200px;
-    width: 180px;
-}
-
-.produto {
-    background-color: #FFFF;
-    border-radius: 5px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-}
-
-.produto img {
-    max-width: 200px;
-}
-
-.produto button {
-    background-color: #8B4513;
-    border: none;
-    border-radius: 3px;
-    color: #FFF;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-}
-
-.produto button:hover {
-    background-color: #A0522D;
 }
