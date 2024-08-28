@@ -1,9 +1,19 @@
+/* 1170px horizontal dá problema */
+
+/* 
+.color1 { #ac854c };
+.color2 { #edd186 };
+.color3 { #edd186 };
+.color4 { #9c8c61 };
+.color5 { #edd186 }; 
+*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x:hidden;
     background-color: #f1f1f1;
+    width: 100%;
 }
 .whatsapp{
     position: fixed;
@@ -16,24 +26,14 @@ body {
 /* NAVBAR */
 .cabecalho{
     display: flex;
-    width: 100vw;
-    height: 20vh;
-    background-color: #cfcfcf;
-    font-size: 12px;
-    justify-content: center;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-.cabecalho h1{
-    font-weight: 300;
-}
-.cabecalho2{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #dfdfdf;
-    color: black;
+    justify-content: space-around;
+    background-image: url(/img/inicio.jpg);
+    background-repeat: round no-repeat;
     text-align: center;
-    align-items: center;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    align-items: baseline;
+    height: 100vh;
+    width: 100vw;
+    box-shadow: 0 4px 5px rgba(255, 255, 255, 0.1);
 }
 #pesquisar{
     background-color: #ffffff;
@@ -70,12 +70,12 @@ body {
 .navbar a {
     text-decoration: none;
     font-size: 20px;
-    color: rgba(44, 44, 44, 0.952); /* Marrom escuro */
+    color: rgba(255, 255, 255, 0.952);
     margin: 0 30px;
 }
 .navbar a:hover{
     cursor: pointer;
-    color: #0b60af;
+    color: #d6c319;
 }
 #perfil-carrinho{
     align-items: center;
@@ -94,106 +94,17 @@ body {
 }
 /* FOOTER */
 footer {
-    background-color: rgb(219, 219, 219); /* Marrom escuro */
-    color: rgb(85, 85, 85);
+    background-color: rgb(0, 0, 0); /* Marrom escuro */
     text-align: center;
     padding: 2px;
     bottom: 0;
+    color: white;
     margin: 0;
     padding-bottom: 10px;
     width: 100vw;
 }
 footer p{
     font-size: 0.8rem;
-}
-/* SLIDES*/
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-}
-.quadroslide{
-    margin-bottom: 10px;
-    width: 90vw;
-    height: 600px;
-    overflow: hidden;
-}
-.slides{
-    width: 400%;
-    height: 600px;
-    display: flex;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    width: 25%;
-    position: relative;
-    transition: 1s;
-}
-.slide img{
-    width: 100%;
-    height: 100%;
-}
-.manual-navigation{
-    position: absolute;
-    width: 90vw;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    padding: 4.5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.6s;
-}
-.manual-btn:not(:last-child){
-    margin-right: 40px;
-}
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-.navigation-auto div{
-    background-color: rgb(0, 0, 0);
-    padding: 4.5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.6s;
-}
-.navigation-auto{
-    position: absolute;
-    width: 90vw;
-    margin-top: 610px;
-    display: flex;
-    justify-content: center;
-}
-.navigation-auto div:not(:last-child){
-    margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #c45100;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #c45100;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #c45100;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #c45100;
 }
 /* CONHEÇA! */
 .conheca{
@@ -216,9 +127,14 @@ footer p{
     justify-content: center;
 }
 /* RECOMENDADOS */
-.recomendados {
+.recomendados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0px auto 20px;
     max-width: 1200px;
+    font-size: 28px;
+    color: black;
 }
 .produtos-recomendado {
     display: flex;
@@ -229,9 +145,10 @@ footer p{
     margin-left: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-basis: calc(25% - 20px);
     padding: 20px;
     min-width: 220px;
+    color: black;
+    font-size: 16px;
     text-align: center;
 }
 .produto-recomendado img {
@@ -257,22 +174,25 @@ footer p{
 /* 1º SEÇÃO DE IMAGENS */
 .tamanho-imagens{
     display: flex;
-    margin-left: 200px;
-    margin-right: 200px;
-    justify-content: space-evenly;
+    justify-content: center;
+    background-color: rgb(237, 230, 215);
 }
 .imagens{
     display: flex;
 }
 .imagens img{
-    margin: 10px;
-    width: 700px;
-    height: 300px;
+    width: 80vw;
+    height: 90vh;
 }
 /* OFERTA ESPECIAL */
 .oferta-especial {
     margin: 0px auto 20px;
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    font-size: 28px;
 }
 .produtos-oferta {
     display: flex;
@@ -286,6 +206,8 @@ footer p{
     flex-basis: calc(25% - 20px);
     padding: 20px;
     min-width: 220px;
+    color: black;
+    font-size: 16px;
     text-align: center;
 }
 .produto-oferta img {

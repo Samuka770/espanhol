@@ -98,18 +98,53 @@ footer {
 footer p{
     font-size: 0.8rem;
 }
-/* Content */
-.sobre{
-    height: 100vh;
+/* Section vinho1 */
+.sair{
+    font-size: 30px;
+    position: absolute;
     display: flex;
-    background-color: white;
+    text-decoration: none;
+    color: red;
+    flex-direction: row-reverse;
+    right: 12vw;
+    top: 25vh;
 }
-.containersobre{
+.sectionvinho {
+    background-color: rgb(255, 255, 255);
+    padding: 60px;
     display: flex;
+    height: 80vh;
+    justify-content: center;
+    gap: 1.5vw;
     align-items: center;
 }
-.equipe {
-    background-color: rgb(228, 228, 228);
+.imgvinho{
+    height: 60vh;
+}
+.infodireita{
     display: flex;
-    justify-content: center;
+    gap: 8vh;
+    width: 35vw;
+    flex-direction: column;
+}
+.price{
+    font-size: 20px;
+    font-weight: 600;
+    color: purple;
+}
+button {
+    background-color: rgb(122, 16, 16);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: rgb(75, 10, 10);
 }

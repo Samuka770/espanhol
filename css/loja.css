@@ -1,9 +1,11 @@
+/* 1170px horizontal dá problema */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x:hidden;
     background-color: #f1f1f1;
+    width: 100%;
 }
 .whatsapp{
     position: fixed;
@@ -16,24 +18,14 @@ body {
 /* NAVBAR */
 .cabecalho{
     display: flex;
-    width: 100vw;
-    height: 20vh;
-    background-color: #cfcfcf;
-    font-size: 12px;
-    justify-content: center;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-.cabecalho h1{
-    font-weight: 300;
-}
-.cabecalho2{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #dfdfdf;
-    color: black;
+    justify-content: space-around;
+    background-image: url(/img/loja.jpg);
+    background-repeat: round;
     text-align: center;
-    align-items: center;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    align-items: baseline;
+    height: 8vh;
+    width: 100vw;
+    box-shadow: 0 4px 5px rgba(255, 255, 255, 0.1);
 }
 #pesquisar{
     background-color: #ffffff;
@@ -70,12 +62,12 @@ body {
 .navbar a {
     text-decoration: none;
     font-size: 20px;
-    color: rgba(44, 44, 44, 0.952); /* Marrom escuro */
+    color: rgba(255, 255, 255, 0.952);
     margin: 0 30px;
 }
 .navbar a:hover{
     cursor: pointer;
-    color: #0b60af;
+    color: #d6c319;
 }
 #perfil-carrinho{
     align-items: center;
@@ -94,11 +86,11 @@ body {
 }
 /* FOOTER */
 footer {
-    background-color: rgb(219, 219, 219); /* Marrom escuro */
-    color: rgb(85, 85, 85);
+    background-color: rgb(0, 0, 0); /* Marrom escuro */
     text-align: center;
     padding: 2px;
     bottom: 0;
+    color: white;
     margin: 0;
     padding-bottom: 10px;
     width: 100vw;
@@ -112,7 +104,7 @@ footer p{
     display: flex;
     justify-content: center;
     font-size: 48px;
-    color: rgb(11, 201, 27);
+    color: #000000;
 }
 .section{
     padding: 30px;
@@ -140,12 +132,14 @@ footer p{
     justify-content: center;
 }
 .product {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    margin: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    color: black;
+    font-size: 16px;
     padding: 10px;
-    margin: 1px;
     text-align: center;
     width: 200px;
     height: 350px;
@@ -156,7 +150,7 @@ footer p{
     cursor: pointer;
     font-weight: 500;
     font-size: 12px;
-    background-color: #0b60af;
+    background-color: #ac854c;
     justify-content: center;
     padding: 3px;
     text-decoration: none;
@@ -167,7 +161,7 @@ footer p{
 }
 .product img {
     max-width: 100%;
-    height: auto;
+    height: 215px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -179,11 +173,11 @@ footer p{
 }
 .product .price {
     font-size: 16px;
-    color: #888;
+    color: #535353;
     margin: 0 0 15px;
 }
 .product button {
-    background-color: rgb(122, 16, 16);
+    background-color: #ac854c;
     border: none;
     color: #fff;
     padding: 10px 15px;
@@ -196,5 +190,5 @@ footer p{
     transition: 0.3s;
 }
 .product button:hover {
-    background-color: rgb(75, 10, 10);
+    background-color: rgb(99, 66, 18);
 }

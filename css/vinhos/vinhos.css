@@ -1,11 +1,11 @@
+/* 1170px horizontal dá problema */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x:hidden;
     background-color: #f1f1f1;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
 }
 .whatsapp{
     position: fixed;
@@ -18,24 +18,14 @@ body {
 /* NAVBAR */
 .cabecalho{
     display: flex;
-    width: 100vw;
-    height: 20vh;
-    background-color: #cfcfcf;
-    font-size: 12px;
-    justify-content: center;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-.cabecalho h1{
-    font-weight: 300;
-}
-.cabecalho2{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #dfdfdf;
-    color: black;
+    justify-content: space-around;
+    background-image: url(/img/loja.jpg);
+    background-repeat: round;
     text-align: center;
-    align-items: center;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    align-items: baseline;
+    height: 8vh;
+    width: 100vw;
+    box-shadow: 0 4px 5px rgba(255, 255, 255, 0.1);
 }
 #pesquisar{
     background-color: #ffffff;
@@ -72,12 +62,12 @@ body {
 .navbar a {
     text-decoration: none;
     font-size: 20px;
-    color: rgba(44, 44, 44, 0.952); /* Marrom escuro */
+    color: rgba(255, 255, 255, 0.952);
     margin: 0 30px;
 }
 .navbar a:hover{
     cursor: pointer;
-    color: #0b60af;
+    color: #d6c319;
 }
 #perfil-carrinho{
     align-items: center;
@@ -94,6 +84,20 @@ body {
     margin-left: 25px;
     height: 35px;
 }
+/* FOOTER */
+footer {
+    background-color: rgb(0, 0, 0); /* Marrom escuro */
+    text-align: center;
+    padding: 2px;
+    bottom: 0;
+    color: white;
+    margin: 0;
+    padding-bottom: 10px;
+    width: 100vw;
+}
+footer p{
+    font-size: 0.8rem;
+}
 /* Section vinho1 */
 .sair{
     font-size: 30px;
@@ -102,33 +106,62 @@ body {
     text-decoration: none;
     color: red;
     flex-direction: row-reverse;
-    right: 12vw;
-    top: 25vh;
+    right: 6vw;
+    top: 15vh;
 }
 .sectionvinho {
-    background-color: #f1f1f1;
-    padding: 60px;
+    background-color: rgb(243, 243, 243);
     display: flex;
-    height: 80vh;
+    height: 82vh;
+    gap: 60px;
     justify-content: center;
-    gap: 1.5vw;
     align-items: center;
 }
-.imgvinho{
+.direita{
+    padding: 0;
     height: 60vh;
-}
-.infodireita{
     display: flex;
-    gap: 8vh;
-    width: 35vw;
+    justify-content: space-between;
     flex-direction: column;
 }
-.price{
-    font-size: 20px;
-    font-weight: 600;
-    color: purple;
+.gap{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
-button {
+.gap2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.gap2 p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.imgvinho{
+    height: 65vh;
+}
+.titulo{
+    font-size: 32px;
+    font-weight: 900;
+}
+.nmr{
+    display: flex;
+    height: 45px; 
+    width: 45px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.price{
+    font-size: 28px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+}
+.gap a {
+    margin-top: 5px;
     background-color: rgb(122, 16, 16);
     border: none;
     color: #fff;
@@ -136,25 +169,27 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-button:hover {
+.gap a:hover {
     background-color: rgb(75, 10, 10);
 }
-/* FOOTER */
-footer {
-    background-color: rgb(219, 219, 219); /* Marrom escuro */
-    color: rgb(85, 85, 85);
-    text-align: center;
-    padding: 2px;
-    bottom: 0;
-    margin: 0;
-    padding-bottom: 10px;
-    width: 100vw;
+/* Section2 */
+.section2{
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 243);
 }
-footer p{
-    font-size: 0.8rem;
+.caracteristicas{
+    border-top: #ac854c solid 2px;
+    border-bottom: #ac854c solid 2px;
+    width: 65vw;
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 }
