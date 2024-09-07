@@ -28,7 +28,8 @@ body {
     display: flex;
     justify-content: space-around;
     background-image: url(/img/inicio.jpg);
-    background-repeat: round no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100vw;
     text-align: center;
     align-items: baseline;
     height: 100vh;
@@ -70,7 +71,7 @@ body {
 .navbar a {
     text-decoration: none;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.952);
+    color: rgb(0, 0, 0);
     margin: 0 30px;
 }
 .navbar a:hover{
@@ -91,6 +92,88 @@ body {
     cursor: pointer;
     margin-left: 25px;
     height: 35px;
+}
+.titulonav{
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    position: absolute;
+    backdrop-filter: blur(4px);
+    left: 55%;
+    bottom: 50%;
+}
+/* PRODUCT */
+.product {
+    background-color: #d3d3d3;
+    position: absolute;
+    right: 60%;
+    top: 25%;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    height: 350px;
+}
+.vinhomes{
+    right: 59%;
+    top: 23.5%;
+    backdrop-filter: blur(2px);
+    padding: 1.5px;
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+.visual{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #ac854c;
+    justify-content: center;
+    padding: 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.product:hover .visual{
+    display: flex;
+}
+.product img {
+    max-width: 100%;
+    height: 215px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.product h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 10px;
+}
+.product .price {
+    font-size: 16px;
+    color: #535353;
+    margin: 0 0 15px;
+}
+.product button {
+    background-color: #ac854c;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.product button:hover {
+    background-color: rgb(99, 66, 18);
 }
 /* FOOTER */
 footer {
