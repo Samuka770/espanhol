@@ -17,7 +17,14 @@
             <a href="/">Início</a>
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
-            <a href="/html/vinicolas.html">Vinícolas</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
+                  <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
+                  <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
+                </div>
+              </div>
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
         </div>
@@ -27,19 +34,19 @@
         </div>
     </nav>
     <!--Content-->
-    <section class="sectionmarques1">
-        <img class="imgmarques" src="/img/marques-de-arviza.png">
+    <section style="background-image: url(/img/marques.jpg);" class="section1">
+        <img class="imgvinicola" src="/img/marques-de-arviza.png">
     </section>
-    <section class="sectionmarques2">
+    <section style="background-image: url(/img/historia.jpg);" class="section2">
             <div class="fundoescuro">
                 <h2>HISTÓRIA</h2>
                 <p>_______<br></p>
                 <p><br>
-                    Bodegas Marqués de Arviza é uma vinícola familiar tradicional e a segunda mais antiga produtora de vinhos em La Rioja. Suas instalações datam de 1874 e são construídas sobre mais de 500 metros de “calados” (adegas subterrâneas) originais dos séculos XVI e XVII, que conferem grande intensidade e personalidade aos vinhos.
+                    A Bodegas Marqués de Arviza é uma das vinícolas mais antigas da Espanha, fundada em 1874 na região de Rioja Alta, em Fuenmayor. Com uma longa tradição, ela se destaca pela preservação de suas caves subterrâneas históricas, que datam do século XVI e proporcionam condições ideais para o envelhecimento dos vinhos. A Marqués de Arviza é conhecida principalmente pelos vinhos tintos encorpados, produzidos a partir das variedades Tempranillo e Graciano. A vinícola combina métodos tradicionais com tecnologia moderna, buscando oferecer vinhos de alta qualidade que refletem o caráter autêntico de Rioja.
                 </p>
             </div>
     </section>
-    <section class="sectionmarques3">
+    <section style="background-image: url(/img/vinhedos.jpg);" class="section3">
         <div class="fundoescuro">
             <h2>VINHEDOS</h2>
             <p>_______<br></p>
@@ -59,5 +66,6 @@
 <a href="https://www.facebook.com/"><img width="25" height="25" src="/img/face.png"></a>
 </div>
 </footer>
+<script src="/script.js"></script>
 </body>
 </html>

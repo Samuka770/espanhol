@@ -18,7 +18,14 @@
             <a href="/">Início</a>
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
-            <a href="/html/vinicolas.html">Vinícolas</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
+                  <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
+                  <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
+                </div>
+              </div>
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
         </div>
@@ -26,11 +33,10 @@
         <img src="/img/perfil.png" id="perfil" alt="Perfil">
         <img src="/img/carrinho.png" id="carrinho" alt="Carrinho">
         </div>
-        <h1 class="titulonav">Rioja Luxury Wines</h1>
-        <div class="product">
-            <a href="/html/vinhos/vinho1.html" class="visual">Visualização Prévia</a>
-            <img class="img" src="/img/vinho1.png" alt="Vinho 1">
-            <h2>Marques de Arviza</h2>
+        <div class="productmain">
+            <a href="/html/vinhos/vinhoilurcebranco.html" class="visual">Visualização Prévia</a>
+            <img class="img" src="/img/vinhoilurcebranco.png" alt="Vinho 1">
+            <h2>Ilurce Branco</h2>
             <p class="price">R$ 79,90</p>
             <button>Adicionar ao Carrinho</button>
         </div>
@@ -45,116 +51,84 @@
     <section class="recomendados">
             <h2>Recomendados</h2>
             <div class="produtos-recomendado">
-                <div class="produto-recomendado">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Recomendado 1</h3>
-                    <p class="preco-recomendado">R$ 60,00</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="1">
-                        <input type="hidden" name="nome" value="Vinho Recomendado 1">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
+                <div class="product">
+                    <a href="/html/vinhos/vinhomarques.html" class="visual">Visualização Prévia</a>
+                    <img class="img" src="/img/vinhomarques.png" alt="Vinho 1">
+                    <h2>Marques de Arviza</h2>
+                    <p class="price1">R$ 79,90</p>
+                    <button>Adicionar ao Carrinho</button>
                 </div>
-                <div class="produto-recomendado">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Recomendado 2</h3>
-                    <p class="preco-recomendado">R$ 60,00</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="2">
-                        <input type="hidden" name="nome" value="Vinho Recomendado 2">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
+                <div class="product">
+                    <a href="/html/vinhos/vinhomarialuisa.html" class="visual">Visualização Prévia</a>
+                    <img class="img" src="/img/vinhomarialuisa.png" alt="Vinho 1">
+                    <h2>Maria Luisa</h2>
+                    <p class="price1">R$ 79,90</p>
+                    <button>Adicionar ao Carrinho</button>
                 </div>
-                <div class="produto-recomendado">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Recomendado 3</h3>
-                    <p class="preco-recomendado">R$ 60,00</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="3">
-                        <input type="hidden" name="nome" value="Vinho Recomendado 3">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
+                <div class="product">
+                    <a href="/html/vinhos/vinhocapitanfanegasss.html" class="visual">Visualização Prévia</a>
+                    <img src="/img/vinhocapitanfanegasseleccionespecial.png" alt="Vinho Capitan Fanegas Seleccion Especial">
+                    <h2>Capitan Fanegas Sel/Esp</h2>
+                    <p class="price1">R$ 69,90</p>
+                    <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
                 </div>
-                <div class="produto-recomendado">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Recomendado 4</h3>
-                    <p class="preco-recomendado">R$ 60,00</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="4">
-                        <input type="hidden" name="nome" value="Vinho Recomendado 4">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
+                <div class="product">
+                    <a href="/html/vinhos/vinhocapitanfanegasbranco.html" class="visual">Visualização Prévia</a>
+                    <img src="/img/vinhocapitanfanegasbranco.png" alt="Vinho Capitan Fanegas Branco">
+                    <h2>Capitan Fanegas Branco</h2>
+                    <p class="price1">R$ 69,90</p>
+                    <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
                 </div>
             </div>
         </section>
 <!--SEÇÃO DE IMAGEM-->
-        <section class="tamanho-imagens">
-            <a class="imagens" href="#">
-                <img src="/img/slide1.png">
-            </a>
-        </section>
-<!-- OFERTA ESPECIAL -->
-        <section class="oferta-especial">
-            <h2>Oferta Especial</h2>
-            <div class="produtos-oferta">
-                <div class="produto-oferta">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Oferta 1</h3>
-                    <p class="preco-original">R$ 80,00</p>
-                    <p class="preco-desconto">R$ 60,00</p>
-                    <p class="desconto">-25%</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="1">
-                        <input type="hidden" name="nome" value="Vinho Oferta 1">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-                <div class="produto-oferta">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Oferta 2</h3>
-                    <p class="preco-original">R$ 80,00</p>
-                    <p class="preco-desconto">R$ 60,00</p>
-                    <p class="desconto">-25%</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="2">
-                        <input type="hidden" name="nome" value="Vinho Oferta 2">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-                <div class="produto-oferta">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Oferta 3</h3>
-                    <p class="preco-original">R$ 80,00</p>
-                    <p class="preco-desconto">R$ 60,00</p>
-                    <p class="desconto">-25%</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="3">
-                        <input type="hidden" name="nome" value="Vinho Oferta 3">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
-                <div class="produto-oferta">
-                    <img src="/img/vinho1.jpg" alt="Vinho 1">
-                    <h3>Vinho Oferta 4</h3>
-                    <p class="preco-original">R$ 80,00</p>
-                    <p class="preco-desconto">R$ 60,00</p>
-                    <p class="desconto">-25%</p>
-                    <form action="carrinho.php" method="post">
-                        <input type="hidden" name="id" value="4">
-                        <input type="hidden" name="nome" value="Vinho Oferta 4">
-                        <input type="hidden" name="preco" value="60.00">
-                        <button type="submit">Adicionar ao Carrinho</button>
-                    </form>
-                </div>
+        <section class="imagem">
+            <div class="fundoescuro">
+                <h2>RIOJA</h2>
+                <p>_________________________________<br></p>
+                <p><br>
+                    É uma região vinícola da Espanha, conhecida por ser uma das principais do país e do mundo. A região é dividida em três sub-regiões: Rioja Alta, Rioja Alavesa e Rioja Baja, e é famosa por seus vinhos envelhecidos em tonéis de carvalho americano.
+                </p>
             </div>
         </section>
+<!-- OFERTA ESPECIAL -->
+<section class="recomendados">
+    <h2>Oferta Especial</h2>
+    <div class="produtos-recomendado">
+        <div class="product">
+            <a href="/html/vinhos/vinhoilurcebranco.html" class="visual">Visualização Prévia</a>
+            <img class="img" src="/img/vinhoilurcebranco.png" alt="Vinho 1">
+            <h2>Ilurce Branco</h2>
+            <p style="text-decoration: line-through;" class="price">R$ 79,90</p>
+            <p class="price">R$ 69,90</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="/html/vinhos/vinhoilurcerosado.html" class="visual">Visualização Prévia</a>
+            <img class="img" src="/img/vinhoilurcerosado.png" alt="Vinho 1">
+            <h2>Ilurce Rosado</h2>
+            <p style="text-decoration: line-through;" class="price">R$ 79,90</p>
+            <p class="price">R$ 69,90</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="/html/vinhos/vinhoilurcecrianza.html" class="visual">Visualização Prévia</a>
+            <img src="/img/vinhoilurcecrianza.png" alt="Vinho Capitan Fanegas Seleccion Especial">
+            <h2>Ilurce Crianza</h2>
+            <p style="text-decoration: line-through;" class="price">R$ 79,90</p>
+            <p class="price">R$ 69,90</p>
+            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
+        </div>
+        <div class="product">
+            <a href="/html/vinhos/vinhoilurceangel.html" class="visual">Visualização Prévia</a>
+            <img src="/img/vinhoilurceangel.png" alt="Vinho Capitan Fanegas Branco">
+            <h2>Ilurce Angel</h2>
+            <p style="text-decoration: line-through;" class="price">R$ 79,90</p>
+            <p class="price">R$ 69,90</p>
+            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
+        </div>
+    </div>
+</section>
 <!--FOOTER-->
     <footer>
             <p>Alguma coisa escrita para ser colocada aqui!</p>

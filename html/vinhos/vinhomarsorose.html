@@ -17,7 +17,14 @@
             <a href="/">Início</a> 
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
-            <a href="/html/vinicolas.html">Viniculas</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
+                  <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
+                  <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
+                </div>
+              </div>
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
         </div>
@@ -29,24 +36,20 @@
     <!--Content-->
     <a class="sair" href="/html/loja.html">X</a>
     <section class="sectionvinho">
-        <img height="20px" src="/img/vinho1.png" class="imgvinho" alt="Vinho 1">
+        <img height="20px" src="/img/vinhomarsorose.png" class="imgvinho">
             <div class="direita">
-            <h1 class="titulo">Marques de Arviza Seleccion Especial</h1>
+            <h1 class="titulo">Marso Classico Rose</h1>
             <div class="gap2">
                 <p>
-                    Dupla seleção das uvas, no vinhedo e
-                    na vinícola. Maceração pré-fermentativa em frio
-                    em depósitos de concreto e 18 meses de
-                    envelhecimento em barris de carvalho
-                    francês mais 6 meses em garrafa.
-                    Cor granada com tons violáceos e
-                    muito aromático, a fruta se destaca
-                    sobre a madeira, a fruta preta em forma
-                    de amora, ameixa, acompanhada de
-                    tons picantes dados pelo carvalho.<br>
-                    É um vinho com estrutura, totalmente
-                    redondo, aveludado e com um final de
-                    boca saboroso e duradouro.</p>
+                    Cor rosa muito pálido com reflexos violáceos, boa
+                    presença na taça.<br>
+                    No nariz è elegante, fresco, delicado e complexo.
+                    Lembrando frutas vermelhas como morangos, pêssego
+                    e flores brancas.
+                    Na boca, volumoso no paladar, preenche a boca com
+                    naunces frutadas lembrando as sensações
+                    olfativas, longo, fino e elegante
+                    </p>
             </div>
             <div class="gap">
                 <p class="price">R$ 79,90</p>
@@ -58,20 +61,15 @@
     <section class="section2"> 
         <div class="caracteristicas">
             <h1>Caracteristicas</h1>
-            <p><strong>Variedades de uva:</strong> 100% tempranillo.<br>
-                <strong>Colheita:</strong> à mão após a seleção no campo. Em seguida, outra seleção é feita na
-                vinícola para aceitar somente uvas em perfeita saúde.<br>
-                <strong>Envelhecimento:</strong> 18 meses em barris de carvalho francês Bordeaux.<br>
-                <strong>Cor:</strong> granada com tons violeta.<br>
-                <strong>Aroma:</strong> Muito aromático. Cheira como fruta preta em forma de amora e
-                ameixa, acompanhada de notas picantes emitidas pelo carvalho e, com o tempo, aparecem os tons torrados.<br>
-                <strong>No paladar:</strong> um vinho com estrutura e corpo, sem bordas e totalmente redondo e
-                aveludado. O paladar é saboroso e duradouro.<br>
-                <strong>Armazenagem:</strong> temperatura constante abaixo de 16 ºC, umidade em torno de 80 %
-                e ambiente escuro.<br>
-                <strong>Temperatura de serviço:</strong> entre 16 ºC e 18 ºC.<br>
-                <strong>Pares recomendados:</strong> carnes frias, carnes brancas, aves, guisados, massas e queijos
-                de meia cura</p>
+            <p><strong>Variedades de uva:</strong> Principalmente garnacha, com um toque de tempranillo para maior complexidade.<br>
+                <strong>Colheita:</strong> Colheita manual com seleção cuidadosa na vinícola.<br>
+                <strong>Envelhecimento:</strong>  Em aço inoxidável para manter o frescor e a expressão da fruta.<br>
+                <strong>Cor:</strong> Rosa pálido com tons salmão.<br>
+                <strong>Aroma:</strong> Frutas vermelhas frescas, como morango e framboesa, com um toque floral suave.<br>
+                <strong>No paladar:</strong> Leve e refrescante, com acidez equilibrada e final frutado e suave.<br>
+                <strong>Armazenagem:</strong> Local escuro e fresco, com temperatura constante abaixo de 16 ºC e umidade ao redor de 80%.<br>
+                <strong>Temperatura de serviço:</strong> Entre 8 ºC e 10 ºC.<br>
+                <strong>Pares recomendados:</strong> Acompanha bem saladas, frutos do mar, pratos leves de verão e queijos frescos.</p>
         </div>
     </section>
     <!-- FOOTER -->
@@ -85,5 +83,6 @@
 <a href="https://www.facebook.com/"><img width="25" height="25" src="/img/face.png"></a>
 </div>
 </footer>
+<script src="/script.js"></script>
 </body>
 </html>
