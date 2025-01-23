@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/loja.css">
 </head>
 <body>
-    <a href="https://www.google.com/search?q=teste&oq=teste&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgkIARBFGDsYjwIyBwgCEAAYjwIyBwgDEAAYjwIyBggEEEUYO9IBCDE2MDhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
+    <a href="https://wa.me/554796877872" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
     <!--NAVBAR-->
     <nav class="cabecalho">
         <div id="pesquisar">
-        <input type="text" id="txtBusca" placeholder="Pesquisar na loja"/>
+        <input onkeyup="search_vinho()" type="text" id="txtBusca" placeholder="Pesquisar na loja"/>
         <img src="/img/buscar.png" id="imgbuscar">
         </div>
         <div class="navbar">
@@ -18,167 +19,79 @@
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <button id="dropdownButton" class="dropbtn">Vinícolas</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
                   <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
                   <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
                 </div>
-              </div>
+              </div>              
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
         </div>
         <div id="perfil-carrinho">
-        <img src="/img/perfil.png" id="perfil" alt="Perfil">
-        <img src="/img/carrinho.png" id="carrinho" alt="Carrinho">
+        <img id="cart-button" src="/img/carrinho.png" class="carrinho-de-compras" alt="Carrinho">
         </div>
     </nav>
     <!-- TITULO -->
     <h1 id="titulo">SELEÇÃO DE VINHOS</h1>
          <section class="section">
             <div class="sidebar">
-            <h3>
-            Refine sua busca!
-            </h3>
-            <div id="vinhos">
-                <h4>Vinhos:</h4>
-                <nav style="display: flex; flex-direction: column;">
-                <a><input type="checkbox"> Tinto</a>
-                <a><input type="checkbox"> Branco</a>
-                <a><input type="checkbox"> Champagne</a>
-                <a><input type="checkbox"> Rosé</a>
-                <a><input type="checkbox"> Espumante</a>
-                </nav>
-            </div>
-            <div id="regiao">
-                <h4>Regiões:</h4>
-                <nav style="display: flex; flex-direction: column;">
-                <a><input type="checkbox"> Regiao1</a>
-                <a><input type="checkbox"> Regiao2</a>
-                <a><input type="checkbox"> Regiao3</a>
-                <a><input type="checkbox"> Regiao4</a>
-                <a><input type="checkbox"> Regiao5</a>
-                </nav>
-            </div>
-            <div id="pacote">
-                <h4>Pacotes:</h4>
-                <nav style="display: flex; flex-direction: column;">
-                <a><input type="checkbox"> Pacote1</a>
-                <a><input type="checkbox"> Pacote2</a>
-                <a><input type="checkbox"> Pacote3</a>
-                <a><input type="checkbox"> Pacote4</a>
-                <a><input type="checkbox"> Pacote5</a>
-                </nav>
-            </div>
-            <div id="preco">
-                <h4>Preço:</h4>
-                <nav style="display: flex; flex-direction: column;">
-                <div><input type="range"></div>
-                </nav>
-            </div>
-        </div>
+                <h3>Refine sua busca!</h3>
+                <!-- Filtro por Tipo -->
+                <div class="filters">
+                  <h3>Filtros</h3>
+                  <ul class="filter-options">
+                    <li><label><input type="checkbox" class="filter-checkbox" data-filter="todos" checked> Todos</label></li>
+                    <li><label><input type="checkbox" class="filter-checkbox" data-filter="tinto"> Tinto</label></li>
+                    <li><label><input type="checkbox" class="filter-checkbox" data-filter="branco"> Branco</label></li>
+                    <li><label><input type="checkbox" class="filter-checkbox" data-filter="rose"> Rosé</label></li>
+                    <li><label><input type="checkbox" class="filter-checkbox" data-filter="espumante"> Espumante</label></li>
+                  </ul>
+                </div>               
+              
+                <!-- Filtro por Preço -->
+                <div id="preco">
+                  <h4>Preço:</h4>
+                  <nav style="display: flex; flex-direction: column;">
+                    <div>
+                      <select id="precoFaixa" onchange="applyFilters()">
+                        <option value="todos">Todos</option>
+                        <option value="0-80">Até R$ 80,00</option>
+                        <option value="81-120">R$ 81,00 - R$ 120,00</option>
+                        <option value="121-200">R$ 121,00 - R$ 200,00</option>
+                        <option value="201-500">R$ 201,00 - R$ 500,00</option>
+                        <option value="500+">Acima de R$ 500</option>
+                      </select>
+                    </div>
+                  </nav>
+                </div>
+              </div>
 <!-- /Sidebar -->
 <!-- Inner Content -->
-    <div class="busca-vinhos">
-        <div class="product">
-            <a href="/html/vinhos/vinhomarques.html" class="visual">Visualização Prévia</a>
-            <img class="img" src="/img/vinhomarques.png" alt="Vinho Marques de Arviza">
-            <h2>Marques de Arviza Sel/Esp</h2>
-            <p class="price">R$ 79,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhomarialuisa.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhomarialuisa.png" alt="Vinho Maria Luisa">
-            <h2>Viña Maria Luisa</h2>
-            <p class="price">R$ 79,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhomarsotinto.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhomarsotinto.png" alt="Vinho Marso’Clásico Tinto">
-            <h2>Marso’Clásico Tinto</h2>
-            <p class="price">R$ 89,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhomarsobranco.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhomarsobranco.png" alt="Vinho Marso’Clásico Branco">
-            <h2>Marso’Clásico Branco</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhomarsorose.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhomarsorose.png" alt="Vinho Marso’Clásico Rosé">
-            <h2>Marso’Clásico Rosé</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhocapitanfanegasss.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhocapitanfanegasseleccionespecial.png" alt="Vinho Capitan Fanegas Seleccion Especial">
-            <h2>Capitan Fanegas Sel/Esp</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhocapitanfanegasbranco.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhocapitanfanegasbranco.png" alt="Vinho Capitan Fanegas Branco">
-            <h2>Capitan Fanegas Branco</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhoilurcerosado.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhoilurcerosado.png" alt="Vinho Ilurce Rosado">
-            <h2>Ilurce Rosado</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhoilurcebranco.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhoilurcebranco.png" alt="Vinho Ilurce Branco">
-            <h2>Ilurce Branco</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhoilurcecrianza.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhoilurcecrianza.png" alt="Vinho Ilurce Crianza">
-            <h2>Ilurce Crianza</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhoilurceangel.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhoilurceangel.png" alt="Vinho Ilurce Angel">
-            <h2>Ilurce Angel</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <div class="product">
-            <a href="/html/vinhos/vinhomongeruiz.html" class="visual">Visualização Prévia</a>
-            <img src="/img/vinhomonge-ruiz.png" alt="Vinho Ilurce Angel">
-            <h2>Monge-Ruiz</h2>
-            <p class="price">R$ 69,90</p>
-            <button>Adicionar ao Carrinho</button> <!--FALTA PREÇO-->
-        </div>
-        <!--FIM-->
-    </div>
+    <div class="busca-vinhos"id="produtos-container">
+        <!-- Carrinho de Compras -->
+  <!-- Carrinho de Compras -->
+  <div id="cart-container" class="cart-container">
+    <button id="close-cart-button" class="close-cart-button">X</button>
+    <h2>Vinhos</h2>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="totalPrice" class="total-price">Total: R$ 0.00</div>
+    <a href="finalizarcompra.html" class="checkout-button">Finalizar Compra</a>
+  </div>
 </section>
 <!-- /Inner Content -->
 <!-- FOOTER -->
 <footer>
-    <p>Alguma coisa escrita para ser colocada aqui!</p>
-<h3>Venha conhecer nossa loja física!</h3>
-<p style="margin: 0;">Rua XXX – Nº XXX – Bairro</p><p>Cidade / ESTADO</p><p>CEP: xxxx-xxx</p>
-<h3 style="margin: 0;">EMAIL@ESPANHOL.COM.BR</h3>
-<div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
-<a href="https://www.instagram.com/"><img width="25" height="25" src="/img/insta.png"></a>
-<a href="https://www.facebook.com/"><img width="25" height="25" src="/img/face.png"></a>
-</div>
-</footer>
+    <p>Tradição e Qualidade</p>
+    <p style="margin: 0;">Rua Pedra Gema - Bombinhas / SC | CEP: 88215-000</p><p></p><p></p>
+    <h3 style="margin: 0;">riojaluxurywines@outlook.com</h3>
+    <div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
+    <a href="https://www.instagram.com/riojaluxurywines/?utm_source=ig_web_button_share_sheet"><img width="25" height="25" src="/img/insta.png"></a>
+    </div>
+    </footer>
+    <!-- Javascript --> 
+     <script src="/agecheck.js"></script>
 <script src="/script.js"></script>
 </body>
 </html>

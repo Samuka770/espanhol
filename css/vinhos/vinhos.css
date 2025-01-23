@@ -1,143 +1,8 @@
-/* 1170px horizontal dá problema */
-body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    overflow-x:hidden;
-    background-color: #f1f1f1;
-    width: 100%;
-}
-.whatsapp{
-    position: fixed;
-    top: 90vh;
-    right: 2.5vw;
-    z-index: 1000;
-    padding: 10px;
-    color: white;
-}
-/* NAVBAR */
-.cabecalho{
-    display: flex;
-    justify-content: space-around;
-    background-image: url(/img/loja.jpg);
-    background-repeat: round;
-    text-align: center;
-    align-items: baseline;
-    height: 8vh;
-    width: 100vw;
-    box-shadow: 0 4px 5px rgba(255, 255, 255, 0.1);
-}
-#pesquisar{
-    background-color: #ffffff;
-    height: 35px;
-    padding: 15px;
-    border-radius: 20px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#txtBusca{ 
-    font-size: 16px;
-    background: none;
-    outline: none;
-    border: none;
-    text-align:left;
-    height: 35px;
-    width: 150px;
-}
-#imgbuscar{
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-}
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    font-weight: 600;
-}
-.navbar a {
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    margin: 0 30px;
-}
-.navbar a:hover{
-    cursor: pointer;
-    color: #d6c319;
-}
-#perfil-carrinho{
-    align-items: center;
-    display: flex;
-}
-#perfil{
-    display: flex;
-    cursor: pointer;
-    margin-right: 20px;
-    height: 40px;
-}
-#carrinho{
-    cursor: pointer;
-    margin-left: 25px;
-    height: 35px;
-}
-/* DropDown */
-.dropbtn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    margin: 0 20px;
-    text-align: center;
-    font-weight: 600;
-  }
-  .dropbtn:hover{
-    cursor: pointer;
-    color: #d6c319;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
+/* Voltar */
+.voltar{
+    height: 80px;
+    right: 10vw;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 170px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 0px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
-/* FOOTER */
-footer {
-    background-color: rgb(0, 0, 0); /* Marrom escuro */
-    text-align: center;
-    padding: 2px;
-    bottom: 0;
-    color: white;
-    margin: 0;
-    padding-bottom: 10px;
-    width: 100vw;
-}
-footer p{
-    font-size: 0.8rem;
 }
 /* Section vinho1 */
 .sair{
@@ -160,9 +25,9 @@ footer p{
 }
 .direita{
     padding: 0;
-    height: 60vh;
+    height: 40vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
 }
 .gap{
@@ -188,13 +53,6 @@ footer p{
 .titulo{
     font-size: 32px;
     font-weight: 900;
-}
-.nmr{
-    display: flex;
-    height: 45px; 
-    width: 45px;
-    font-size: 16px;
-    font-weight: 600;
 }
 .price{
     font-size: 28px;

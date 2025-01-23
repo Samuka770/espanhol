@@ -3,38 +3,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/vinhos/vinhos.css">
 </head>
 <body>
-    <a href="https://www.google.com/search?q=teste&oq=teste&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgkIARBFGDsYjwIyBwgCEAAYjwIyBwgDEAAYjwIyBggEEEUYO9IBCDE2MDhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
+    <a href="https://wa.me/554796877872" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
     <!--NAVBAR-->
     <nav class="cabecalho">
-        <div id="pesquisar">
-        <input type="text" id="txtBusca" placeholder="Pesquisar na loja"/>
-        <img src="/img/buscar.png" id="imgbuscar">
-        </div>
         <div class="navbar">
             <a href="/">Início</a> 
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <button id="dropdownButton" class="dropbtn">Vinícolas</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
                   <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
                   <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
                 </div>
-              </div>
+              </div>  
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
         </div>
-        <div id="perfil-carrinho">
-        <img src="/img/perfil.png" id="perfil" alt="Perfil">
-        <img src="/img/carrinho.png" id="carrinho" alt="Carrinho">
-        </div>
     </nav>
     <!--Content-->
-    <a class="sair" href="/html/loja.html">X</a>
+    <a class="sair" href="/html/loja.html"><img class="voltar" src="/img/voltar.png" alt="Voltar"></a>
     <section class="sectionvinho">
         <img height="20px" src="/img/vinhomarialuisa.png" class="imgvinho">
             <div class="direita">
@@ -55,9 +48,7 @@
                     </p>
             </div>
             <div class="gap">
-                <p class="price">R$ 79,90</p>
-                <input type="number" class="nmr" placeholder="1">
-                <a href="#">Adicionar ao Carrinho</a>
+                <p class="price">R$ 159,00</p>
             </div>
             </div>
     </section>
@@ -77,15 +68,15 @@
     </section>
     <!-- FOOTER -->
     <footer>
-        <p>Alguma coisa escrita para ser colocada aqui!</p>
-<h3>Venha conhecer nossa loja física!</h3>
-<p style="margin: 0;">Rua XXX – Nº XXX – Bairro</p><p>Cidade / ESTADO</p><p>CEP: xxxx-xxx</p>
-<h3 style="margin: 0;">EMAIL@ESPANHOL.COM.BR</h3>
-<div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
-<a href="https://www.instagram.com/"><img width="25" height="25" src="/img/insta.png"></a>
-<a href="https://www.facebook.com/"><img width="25" height="25" src="/img/face.png"></a>
-</div>
-</footer>
+        <p>Tradição e Qualidade</p>
+        <p style="margin: 0;">Rua Pedra Gema - Bombinhas / SC | CEP: 88215-000</p><p></p><p></p>
+        <h3 style="margin: 0;">riojaluxurywines@outlook.com</h3>
+        <div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
+        <a href="https://www.instagram.com/riojaluxurywines/?utm_source=ig_web_button_share_sheet"><img width="25" height="25" src="/img/insta.png"></a>
+        </div>
+        </footer>
+        <!-- Javascript -->
+     <script src="/agecheck.js"></script>
 <script src="/script.js"></script>
 </body>
 </html>

@@ -3,70 +3,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/clube de vinhos.css">
 </head>
 <body>
-    <a href="https://www.google.com/search?q=teste&oq=teste&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgkIARBFGDsYjwIyBwgCEAAYjwIyBwgDEAAYjwIyBggEEEUYO9IBCDE2MDhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
+    <a href="https://wa.me/554796877872" class="whatsapp"><img style="height: 40px;" src="/img/whatsapp.png"></a>
     <!--NAVBAR-->
     <nav class="cabecalho">
-        <div id="pesquisar">
-        <input type="text" id="txtBusca" placeholder="Pesquisar na loja"/>
-        <img src="/img/buscar.png" id="imgbuscar">
-        </div>
         <div class="navbar">
             <a href="/">Início</a>
             <a href="/html/loja.html">Vinhos</a>
             <a href="/html/clubedovinho.html">Clube do Vinho</a>
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Vinícolas</button>
+                <button id="dropdownButton" class="dropbtn">Vinícolas</button>
                 <div id="myDropdown" class="dropdown-content">
                   <a style="margin:0;" href="/html/vinicolas/marques-de-arviza.html">Marques de Arviza</a>
                   <a style="margin:0;" href="/html/vinicolas/Ilurce.html">Ilurce</a>
                   <a style="margin:0;" href="/html/vinicolas/teodoro-ruiz-monge.html">Teodoro Ruiz Monge</a>
                 </div>
-              </div>
+              </div>  
             <a href="/html/sobre.html">Sobre</a>
             <a href="/html/enoturismo.html">Enoturismo</a>
-        </div>
-        <div id="perfil-carrinho">
-        <img src="/img/perfil.png" id="perfil" alt="Perfil">
-        <img src="/img/carrinho.png" id="carrinho" alt="Carrinho">
         </div>
     </nav>
     <!--Content-->
     <section class="sectionclube">
         <div class="centro">
-            <div class="titulo">NOSSO<h1 style="margin:0;">CLUBE</h1></div>
-            <div class="ajuste">
-                <p>Mergulhe na essência do renomado terroir de Rioja com nosso clube de vinhos, onde exclusividade e qualidade são a nossa marca registrada. Na Rioja Luxury Wines, temos orgulho em oferecer a você uma experiência única, centrada nos vinhos mais seletos e raros desta célebre região espanhola.</p></div>
-            <div class="input">
-            <p>Nome<input></p>
-            <p>Sobrenome<input></p>
-            </div>
-            <div class="input">
-            <p>Email<input></p>
-            <p>Telefone<input></p>
-            </div>
-            <div class="input2">
-            <p>Endereço<br><input></p>
-            <p class="msg">Mensagem<br><input></p>
+            <div class="titulo">
+                NOSSO
+                <h1 style="margin: 0;">CLUBE</h1>
             </div>
             <div class="ajuste">
-            <button>Enviar</button>
+                <p>Envie uma mensagem para nossa equipe!</p>
+            </div>
+            <!-- Ícone de Exclamação que abre o popup -->
+            <div class="info-icon" id="infoIcon">!</div>
+            
+            <!-- Formulário -->
+            <form id="cadastroForm">
+                <div class="input">
+                    <p>Nome <input type="text" id="nome" required></p>
+                    <p>Sobrenome <input type="text" id="sobrenome" required></p>
+                </div>
+                <div class="input">
+                    <p>Email <input type="email" id="email" required></p>
+                    <p>Telefone <input type="tel" id="telefone" required></p>
+                </div>
+                <div class="input2">
+                    <p>Endereço<br><input type="text" id="endereco" required></p>
+                    <p class="msg">Mensagem<br><textarea id="mensagem" class="msg" required></textarea></p>
+                </div>
+                <div class="ajuste">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    
+        <!-- Popup com a mensagem -->
+        <div id="popupMessage" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <h2>Bem-vindo ao Clube de Vinho Rioja Luxury Wines!</h2>
+                <p>É com grande prazer que o convidamos a fazer parte do nosso Clube de Vinho Rioja, uma experiência exclusiva dedicada a apresentar o melhor dos vinhos desta renomada região da Espanha. Rioja é sinônimo de tradição, excelência e paixão pela vinicultura, com uma rica história de produção de vinhos que combinam sabor, sofisticação e autenticidade.</p>
+                <p>Ao se tornar membro do nosso clube, você terá acesso a uma seleção cuidadosamente curada de vinhos de Rioja, escolhidos por sua qualidade e caráter únicos. Além disso, você poderá participar de eventos exclusivos, degustações e receber novidades e informações sobre as safras mais recentes.</p>
+                <p>Nossa missão é proporcionar a você uma verdadeira viagem sensorial pela região de Rioja, através de vinhos que representam o melhor de sua tradição vitivinícola. Seja para ocasiões especiais ou para o prazer de uma boa taça no dia a dia, o Clube de Vinho Rioja será seu parceiro ideal.</p>
+                <p>Junte-se a nós e descubra os segredos e encantos dos vinhos de Rioja, com toda a excelência que eles merecem!</p>
+                <p>Saúde e bons momentos!</p>
             </div>
         </div>
     </section>
+    
+    <div id="toast-container"></div>
+    
     <!-- FOOTER -->
     <footer>
-        <p>Alguma coisa escrita para ser colocada aqui!</p>
-<h3>Venha conhecer nossa loja física!</h3>
-<p style="margin: 0;">Rua XXX – Nº XXX – Bairro</p><p>Cidade / ESTADO</p><p>CEP: xxxx-xxx</p>
-<h3 style="margin: 0;">EMAIL@ESPANHOL.COM.BR</h3>
-<div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
-<a href="https://www.instagram.com/"><img width="25" height="25" src="/img/insta.png"></a>
-<a href="https://www.facebook.com/"><img width="25" height="25" src="/img/face.png"></a>
-</div>
-</footer>
+        <p>Tradição e Qualidade</p>
+        <p style="margin: 0;">Rua Pedra Gema - Bombinhas / SC | CEP: 88215-000</p><p></p><p></p>
+        <h3 style="margin: 0;">riojaluxurywines@outlook.com</h3>
+        <div style="margin-top: 5px; display: flex; justify-content: center; align-content: center; gap: 20px;">
+        <a href="https://www.instagram.com/riojaluxurywines/?utm_source=ig_web_button_share_sheet"><img width="25" height="25" src="/img/insta.png"></a>
+        </div>
+        </footer>
+        <!-- Javascript -->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+               emailjs.init({
+                 publicKey: "6jBbgvQWCrIxP0Pku",
+               });
+            })();
+         </script>
+     <script src="/agecheck.js"></script>
 <script src="/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 /* 1170px horizontal dá problema */
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -11,7 +14,7 @@ body {
     position: fixed;
     top: 90vh;
     right: 2.5vw;
-    z-index: 1000;
+    z-index: 999;
     padding: 10px;
     color: white;
 }
@@ -19,8 +22,7 @@ body {
 .cabecalho{
     display: flex;
     justify-content: space-around;
-    background-image: url(/img/loja.jpg);
-    background-repeat: round;
+    background-color: #5E2129;
     text-align: center;
     align-items: baseline;
     height: 8vh;
@@ -37,6 +39,9 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.product::marker{
+    content: none;
+}
 #txtBusca{ 
     font-size: 16px;
     background: none;
@@ -44,7 +49,7 @@ body {
     border: none;
     text-align:left;
     height: 35px;
-    width: 150px;
+    width: 180px;
 }
 #imgbuscar{
     cursor: pointer;
@@ -64,32 +69,61 @@ body {
     font-size: 20px;
     color: rgb(0, 0, 0);
     margin: 0 30px;
+    font-weight: 900;
 }
 .navbar a:hover{
     cursor: pointer;
-    color: #d6c319;
+    color: rgb(255, 255, 255);
 }
-#perfil-carrinho{
-    align-items: center;
-    display: flex;
-}
-#perfil{
-    display: flex;
+/* DropDown */
+.dropbtn {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-    margin-right: 20px;
-    height: 40px;
-}
-#carrinho{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin: 0 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .dropbtn:hover{
     cursor: pointer;
-    margin-left: 25px;
-    height: 35px;
-}
+    color: #ffffff;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #5E2129;
+    margin-top: 20px;
+    left: -15px;
+    min-width: 170px;
+    overflow: auto;
+    box-shadow: 2px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #501c23}
+  
+  .show {display: block;}
 /* FOOTER */
 footer {
+    position: relative;
     background-color: rgb(0, 0, 0); /* Marrom escuro */
     text-align: center;
     padding: 2px;
-    bottom: 0;
     color: white;
     margin: 0;
     padding-bottom: 10px;
@@ -97,54 +131,4 @@ footer {
 }
 footer p{
     font-size: 0.8rem;
-}
-/* Section vinho1 */
-.sair{
-    font-size: 30px;
-    position: absolute;
-    display: flex;
-    text-decoration: none;
-    color: red;
-    flex-direction: row-reverse;
-    right: 12vw;
-    top: 25vh;
-}
-.sectionvinho {
-    background-color: rgb(255, 255, 255);
-    padding: 60px;
-    display: flex;
-    height: 80vh;
-    justify-content: center;
-    gap: 1.5vw;
-    align-items: center;
-}
-.imgvinho{
-    height: 60vh;
-}
-.infodireita{
-    display: flex;
-    gap: 8vh;
-    width: 35vw;
-    flex-direction: column;
-}
-.price{
-    font-size: 20px;
-    font-weight: 600;
-    color: purple;
-}
-button {
-    background-color: rgb(122, 16, 16);
-    border: none;
-    color: #fff;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-button:hover {
-    background-color: rgb(75, 10, 10);
 }
